@@ -1,6 +1,7 @@
 :root {
   --cream: #f8f4ee;
   --paper: #fffdf9;
+
   --ink: #2b2724;
   --muted: #746d67;
 
@@ -206,6 +207,7 @@ nav {
 
 .button-light {
   background: var(--paper);
+
   border: 1px solid var(--line);
 }
 
@@ -229,6 +231,7 @@ nav {
 
 .intro-copy {
   font-size: 1rem;
+
   color: var(--muted);
 }
 
@@ -274,8 +277,6 @@ nav {
 .highlight-card {
   min-height: 205px;
 
-  background: var(--paper);
-
   border: 1px solid var(--line);
 
   border-radius: 18px;
@@ -297,13 +298,41 @@ nav {
   box-shadow: 0 10px 26px rgba(40, 35, 30, 0.06);
 }
 
-.highlight-card.featured {
+
+/* GREEN WRITING CARD */
+
+.writing-card {
+  background: var(--sage);
+}
+
+.writing-card p {
+  color: #3e493b;
+}
+
+
+/* WHITE CROCHET CARD */
+
+.crochet-card {
+  background: var(--paper);
+}
+
+.crochet-card p {
+  color: var(--muted);
+}
+
+
+/* PINK ACCOMPLISHMENTS CARD */
+
+.accomplishments-card {
   background: var(--rose-light);
 }
 
-.crochet-card {
-  background: var(--sage);
+.accomplishments-card p {
+  color: var(--muted);
 }
+
+
+/* CARD CONTENT */
 
 .card-label {
   font-size: 0.69rem;
@@ -326,13 +355,7 @@ nav {
 }
 
 .highlight-card p {
-  color: var(--muted);
-
   font-size: 0.9rem;
-}
-
-.crochet-card p {
-  color: #3e493b;
 }
 
 .card-link {
