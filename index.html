@@ -1,12 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katelin Walsch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Katelin Walsch</title>
+
+  <meta
+    name="description"
+    content="Personal website of Katelin Walsch — writing, experience, projects, and more."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --cream: #f9f6f0;
+      --paper: #fffdf9;
+      --ink: #292725;
+      --muted: #6f6b66;
+      --sage: #a8b5a2;
+      --sage-dark: #687963;
+      --rose: #d7afa9;
+      --rose-light: #f1dfdc;
+      --line: #ded9d1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(249, 246, 240, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--sage-dark);
+    }
+
+    /* GENERAL */
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 30px;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      margin-bottom: 14px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 3.3rem);
+      margin-bottom: 30px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 10vw, 7.5rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--sage-dark);
+      font-style: italic;
+    }
+
+    .hero-intro {
+      max-width: 680px;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    .hero-buttons {
+      margin-top: 38px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--sage);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 70px;
+    }
+
+    .about-copy {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .about-copy p + p {
+      margin-top: 20px;
+    }
+
+    .little-note {
+      margin-top: 30px;
+      padding: 22px;
+      background: var(--rose-light);
+      border-radius: 18px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 0.7fr;
+      gap: 30px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: center;
+    }
+
+    .experience-role {
+      font-weight: 600;
+    }
+
+    .experience-org,
+    .experience-date {
+      color: var(--muted);
+    }
+
+    .experience-date {
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    /* CARDS */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(30, 30, 30, 0.06);
+    }
+
+    .card-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sage-dark);
+      margin-bottom: 13px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--rose);
+    }
+
+    /* CROCHET */
+
+    #crochet .card:first-child {
+      background: var(--rose-light);
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      background: var(--sage);
+      border-radius: 30px;
+      padding: 60px;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      max-width: 550px;
+      margin-bottom: 25px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+
+    footer {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 30px 50px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--line);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .about-grid,
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .experience-date {
+        text-align: left;
+      }
+
+      .contact-box {
+        padding: 35px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Katelin Walsch</h1>
-    <p>Website coming soon.</p>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a class="name" href="#home">Katelin Walsch</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#writings">Writings</a></li>
+        <li><a href="#crochet">Crochet</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <div class="eyebrow">Welcome</div>
+
+      <h1>
+        Katelin<br>
+        <span>Walsch.</span>
+      </h1>
+
+      <p class="hero-intro">
+        Law, writing, creative projects, and the things I make along the way.
+        This is my little corner of the internet for work I'm proud of,
+        ideas I'm exploring, and projects I want to remember.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#writings" class="button button-primary">Read my work</a>
+        <a href="#about" class="button button-secondary">About me</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="eyebrow">About</div>
+
+    <div class="about-grid">
+
+      <div>
+        <h2>A little about me.</h2>
+      </div>
+
+      <div class="about-copy">
+
+        <p>
+          I'm Katelin. This website is a home for both sides of my life:
+          my professional and academic work, and the creative projects
+          I spend my free time making.
+        </p>
+
+        <p>
+          Here you'll find my writing and research, a simple overview of
+          my experience, and an ever-growing collection of crochet projects.
+        </p>
+
+        <div class="little-note">
+          Serious about the work. Not serious enough to make my entire
+          website beige.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+
+    <div class="eyebrow">Experience</div>
+    <h2>Where I've been.</h2>
+
+    <div class="experience-list">
+
+      <!-- COPY THIS BLOCK FOR EACH JOB -->
+      <div class="experience-item">
+        <div class="experience-role">Position Title</div>
+        <div class="experience-org">Organization</div>
+        <div class="experience-date">Year – Year</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-role">Position Title</div>
+        <div class="experience-org">Organization</div>
+        <div class="experience-date">Year – Year</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-role">Position Title</div>
+        <div class="experience-org">Organization</div>
+        <div class="experience-date">Year – Year</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WRITINGS -->
+  <section id="writings">
+
+    <div class="eyebrow">Writings</div>
+    <h2>Selected work.</h2>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-label">Legal Writing</div>
+
+        <h3>Title of Writing</h3>
+
+        <p>
+          A short sentence about the piece can go here — enough context
+          to tell someone what it's about without turning this into a résumé.
+        </p>
+
+        <a class="card-link" href="#">
+          Read more →
+        </a>
+      </article>
+
+
+      <article class="card">
+        <div class="card-label">Research</div>
+
+        <h3>Another Piece</h3>
+
+        <p>
+          Add journal notes, published pieces, academic writing,
+          research projects, or other work you'd like to share.
+        </p>
+
+        <a class="card-link" href="#">
+          Read more →
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CROCHET -->
+  <section id="crochet">
+
+    <div class="eyebrow">Crochet</div>
+    <h2>Things I've made.</h2>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-label">Crochet Project</div>
+
+        <h3>Project Name</h3>
+
+        <p>
+          Eventually we'll put a photo here along with the pattern,
+          yarn, hook size, or whatever else you want to remember.
+        </p>
+
+        <a class="card-link" href="#">
+          See project →
+        </a>
+      </article>
+
+
+      <article class="card">
+        <div class="card-label">Crochet Project</div>
+
+        <h3>Project Name</h3>
+
+        <p>
+          This section can become a visual gallery once we add
+          photographs of your work.
+        </p>
+
+        <a class="card-link" href="#">
+          See project →
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="contact-box">
+
+      <div class="eyebrow">Contact</div>
+
+      <h2>Say hello.</h2>
+
+      <p>
+        For professional inquiries, writing, collaborations,
+        or just to get in touch.
+      </p>
+
+      <div class="contact-links">
+        <!-- Replace # with your actual links -->
+        <a href="#" class="button button-primary">Email me</a>
+        <a href="#" class="button button-secondary">LinkedIn</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <span>© 2026 Katelin Walsch</span>
+    <span>Made with care & a little too much CSS.</span>
+  </footer>
+
 </body>
 </html>
