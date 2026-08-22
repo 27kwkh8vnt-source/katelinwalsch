@@ -1,7 +1,6 @@
 :root {
   --cream: #f8f4ee;
   --paper: #fffdf9;
-
   --ink: #2b2724;
   --muted: #746d67;
 
@@ -101,18 +100,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-
   gap: 18px;
-
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
-
   font-size: 0.88rem;
-
   transition: color 0.2s ease;
 }
 
@@ -126,7 +121,6 @@ nav {
 .section {
   max-width: 1150px;
   margin: 0 auto;
-
   padding-left: 28px;
   padding-right: 28px;
 }
@@ -136,12 +130,11 @@ nav {
 
 .hero {
   min-height: auto;
-
   display: flex;
   align-items: center;
 
   padding-top: 24px;
-  padding-bottom: 26px;
+  padding-bottom: 24px;
 }
 
 .hero-inner {
@@ -150,9 +143,7 @@ nav {
 
 .hero h1 {
   font-size: clamp(4rem, 9vw, 6.7rem);
-
   letter-spacing: -0.05em;
-
   margin-bottom: 14px;
 }
 
@@ -163,18 +154,14 @@ nav {
 
 .hero-copy {
   max-width: 680px;
-
   color: var(--muted);
-
   font-size: 1.1rem;
 }
 
 .hero-buttons {
   margin-top: 20px;
-
   display: flex;
   flex-wrap: wrap;
-
   gap: 11px;
 }
 
@@ -183,16 +170,11 @@ nav {
 
 .button {
   display: inline-block;
-
   padding: 10px 19px;
-
   border-radius: 999px;
-
   text-decoration: none;
-
   font-size: 0.88rem;
   font-weight: 500;
-
   transition: 0.2s ease;
 }
 
@@ -207,7 +189,6 @@ nav {
 
 .button-light {
   background: var(--paper);
-
   border: 1px solid var(--line);
 }
 
@@ -215,23 +196,19 @@ nav {
 /* ABOUT */
 
 .about-section {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 18px;
 }
 
 .intro-grid {
   display: grid;
-
   grid-template-columns: 0.9fr 1.45fr;
-
   gap: 42px;
-
   align-items: start;
 }
 
 .intro-copy {
   font-size: 1rem;
-
   color: var(--muted);
 }
 
@@ -241,16 +218,11 @@ nav {
 
 .text-link {
   display: inline-block;
-
   margin-top: 16px;
-
   text-decoration: none;
-
   color: var(--ink);
-
   font-weight: 600;
   font-size: 0.88rem;
-
   border-bottom: 1px solid var(--rose);
 }
 
@@ -258,8 +230,8 @@ nav {
 /* SELECTED HIGHLIGHTS */
 
 .highlights-section {
-  padding-top: 22px;
-  padding-bottom: 30px;
+  padding-top: 18px;
+  padding-bottom: 28px;
 }
 
 .highlights-section h2 {
@@ -268,19 +240,14 @@ nav {
 
 .highlight-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 16px;
 }
 
 .highlight-card {
   min-height: 205px;
-
   border: 1px solid var(--line);
-
   border-radius: 18px;
-
   padding: 23px;
 
   display: flex;
@@ -294,40 +261,41 @@ nav {
 
 .highlight-card:hover {
   transform: translateY(-3px);
-
   box-shadow: 0 10px 26px rgba(40, 35, 30, 0.06);
 }
 
 
-/* GREEN WRITING CARD */
+/* EXACT CARD COLORS */
 
-.writing-card {
-  background: var(--sage);
+/* 1. RESEARCH, WRITING, & SCHOLARSHIP = GREEN */
+
+.highlight-grid .highlight-card:nth-child(1) {
+  background: var(--sage) !important;
 }
 
-.writing-card p {
+.highlight-grid .highlight-card:nth-child(1) p {
   color: #3e493b;
 }
 
 
-/* WHITE CROCHET CARD */
+/* 2. CROCHET PROJECTS = WHITE */
 
-.crochet-card {
-  background: var(--paper);
+.highlight-grid .highlight-card:nth-child(2) {
+  background: var(--paper) !important;
 }
 
-.crochet-card p {
+.highlight-grid .highlight-card:nth-child(2) p {
   color: var(--muted);
 }
 
 
-/* PINK ACCOMPLISHMENTS CARD */
+/* 3. ACCOMPLISHMENTS = PINK */
 
-.accomplishments-card {
-  background: var(--rose-light);
+.highlight-grid .highlight-card:nth-child(3) {
+  background: var(--rose-light) !important;
 }
 
-.accomplishments-card p {
+.highlight-grid .highlight-card:nth-child(3) p {
   color: var(--muted);
 }
 
@@ -336,21 +304,15 @@ nav {
 
 .card-label {
   font-size: 0.69rem;
-
   letter-spacing: 0.13em;
-
   text-transform: uppercase;
-
   color: var(--sage-dark);
-
   margin-bottom: 9px;
-
   font-weight: 600;
 }
 
 .highlight-card h3 {
   font-size: 1.5rem;
-
   margin-bottom: 7px;
 }
 
@@ -360,16 +322,11 @@ nav {
 
 .card-link {
   display: inline-block;
-
   width: fit-content;
-
   margin-top: 16px;
-
   text-decoration: none;
-
   font-size: 0.86rem;
   font-weight: 600;
-
   border-bottom: 1px solid var(--rose);
 }
 
@@ -377,17 +334,14 @@ nav {
 /* CONTACT */
 
 .contact-section {
-  padding-top: 28px;
-  padding-bottom: 30px;
+  padding-top: 26px;
+  padding-bottom: 28px;
 }
 
 .contact-panel {
   background: var(--ink);
-
   color: white;
-
   border-radius: 22px;
-
   padding: 32px 38px;
 }
 
@@ -401,7 +355,6 @@ nav {
 
 .contact-panel p {
   color: #d8d3cf;
-
   max-width: 650px;
 }
 
@@ -411,9 +364,7 @@ nav {
 
 .contact-panel .button-light {
   background: transparent;
-
   border-color: #6f6861;
-
   color: white;
 }
 
@@ -422,15 +373,10 @@ nav {
 
 footer {
   max-width: 1150px;
-
   margin: 0 auto;
-
   padding: 20px 28px 28px;
-
   border-top: 1px solid var(--line);
-
   font-size: 0.8rem;
-
   color: var(--muted);
 }
 
@@ -451,7 +397,6 @@ footer {
 
   .nav-links {
     justify-content: flex-start;
-
     gap: 13px;
   }
 
@@ -472,8 +417,8 @@ footer {
   }
 
   .hero {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .hero h1 {
@@ -481,18 +426,18 @@ footer {
   }
 
   .about-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   .highlights-section {
-    padding-top: 18px;
-    padding-bottom: 26px;
+    padding-top: 16px;
+    padding-bottom: 24px;
   }
 
   .contact-section {
-    padding-top: 24px;
-    padding-bottom: 26px;
+    padding-top: 22px;
+    padding-bottom: 24px;
   }
 
   .contact-panel {
