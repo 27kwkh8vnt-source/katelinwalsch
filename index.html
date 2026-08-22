@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Katelin Walsch</title>
 
   <meta
     name="description"
-    content="Personal website of Katelin Walsch — writing, experience, projects, and more."
-  >
+    content="Katelin Walsch — law, writing, leadership, and creative projects."
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <style>
     :root {
-      --cream: #f9f6f0;
+      --cream: #f8f4ee;
       --paper: #fffdf9;
-      --ink: #292725;
-      --muted: #6f6b66;
-      --sage: #a8b5a2;
-      --sage-dark: #687963;
-      --rose: #d7afa9;
+      --ink: #2b2724;
+      --muted: #746d67;
+      --sage: #a9b6a3;
+      --sage-dark: #6c7c67;
+      --rose: #d6aaa6;
       --rose-light: #f1dfdc;
-      --line: #ded9d1;
+      --line: #ded7cf;
     }
 
     * {
@@ -43,9 +43,9 @@
     }
 
     body {
+      font-family: "DM Sans", sans-serif;
       background: var(--cream);
       color: var(--ink);
-      font-family: "DM Sans", sans-serif;
       line-height: 1.7;
     }
 
@@ -53,81 +53,79 @@
       color: inherit;
     }
 
-    /* NAVIGATION */
-
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(249, 246, 240, 0.94);
+      z-index: 1000;
+      background: rgba(248, 244, 238, 0.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
 
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: 0 auto;
-      padding: 18px 30px;
+      padding: 18px 28px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
 
-    .name {
+    .brand {
       font-family: "Playfair Display", serif;
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 600;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 27px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 22px;
       list-style: none;
     }
 
     .nav-links a {
       text-decoration: none;
-      font-size: 0.9rem;
       color: var(--muted);
-      transition: 0.2s;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
       color: var(--sage-dark);
     }
 
-    /* GENERAL */
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 100px 30px;
+    .section {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 100px 28px;
     }
 
     .eyebrow {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
       text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 600;
       color: var(--sage-dark);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     h1,
     h2,
     h3 {
       font-family: "Playfair Display", serif;
+      line-height: 1.12;
       font-weight: 600;
-      line-height: 1.15;
     }
 
     h2 {
-      font-size: clamp(2.2rem, 5vw, 3.3rem);
-      margin-bottom: 30px;
+      font-size: clamp(2.3rem, 5vw, 3.4rem);
+      margin-bottom: 28px;
     }
-
-    /* HERO */
 
     .hero {
       min-height: 82vh;
@@ -135,14 +133,14 @@
       align-items: center;
     }
 
-    .hero-content {
+    .hero-inner {
       max-width: 850px;
     }
 
     .hero h1 {
-      font-size: clamp(4rem, 10vw, 7.5rem);
-      letter-spacing: -0.04em;
-      margin-bottom: 24px;
+      font-size: clamp(4.2rem, 10vw, 7.7rem);
+      letter-spacing: -0.05em;
+      margin-bottom: 26px;
     }
 
     .hero h1 span {
@@ -150,231 +148,251 @@
       font-style: italic;
     }
 
-    .hero-intro {
-      max-width: 680px;
-      font-size: 1.2rem;
+    .hero-copy {
+      max-width: 720px;
       color: var(--muted);
+      font-size: 1.2rem;
     }
 
     .hero-buttons {
-      margin-top: 38px;
+      margin-top: 34px;
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 14px;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 22px;
-      border-radius: 100px;
+      padding: 12px 21px;
+      border-radius: 999px;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      font-weight: 500;
       transition: 0.2s ease;
     }
 
-    .button-primary {
+    .button-dark {
       background: var(--ink);
       color: white;
     }
 
-    .button-primary:hover {
+    .button-light {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .button:hover {
       transform: translateY(-2px);
     }
 
-    .button-secondary {
-      border: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .button-secondary:hover {
-      border-color: var(--sage);
-    }
-
-    /* ABOUT */
-
-    .about-grid {
+    .intro-grid {
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
+      grid-template-columns: 0.85fr 1.5fr;
       gap: 70px;
+      align-items: start;
     }
 
-    .about-copy {
-      color: var(--muted);
+    .intro-copy {
       font-size: 1.05rem;
-    }
-
-    .about-copy p + p {
-      margin-top: 20px;
-    }
-
-    .little-note {
-      margin-top: 30px;
-      padding: 22px;
-      background: var(--rose-light);
-      border-radius: 18px;
-      font-family: "Playfair Display", serif;
-      font-style: italic;
-      font-size: 1.1rem;
-    }
-
-    /* EXPERIENCE */
-
-    .experience-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .experience-item {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr 0.7fr;
-      gap: 30px;
-      padding: 25px 0;
-      border-bottom: 1px solid var(--line);
-      align-items: center;
-    }
-
-    .experience-role {
-      font-weight: 600;
-    }
-
-    .experience-org,
-    .experience-date {
       color: var(--muted);
     }
 
-    .experience-date {
-      text-align: right;
-      font-size: 0.9rem;
+    .intro-copy p + p {
+      margin-top: 18px;
     }
 
-    /* CARDS */
+    .note {
+      margin-top: 26px;
+      background: var(--rose-light);
+      border-radius: 20px;
+      padding: 22px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--ink);
+    }
 
-    .card-grid {
+    .highlight-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .card {
+    .highlight-card {
+      min-height: 290px;
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 22px;
       padding: 30px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s ease;
     }
 
-    .card:hover {
+    .highlight-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(30, 30, 30, 0.06);
+      box-shadow: 0 14px 34px rgba(40, 35, 30, 0.07);
+    }
+
+    .highlight-card.featured {
+      background: var(--rose-light);
     }
 
     .card-label {
-      font-size: 0.72rem;
+      font-size: 0.73rem;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
       color: var(--sage-dark);
-      margin-bottom: 13px;
+      margin-bottom: 16px;
+      font-weight: 600;
     }
 
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
+    .highlight-card h3 {
+      font-size: 1.65rem;
+      margin-bottom: 14px;
     }
 
-    .card p {
+    .highlight-card p {
       color: var(--muted);
       font-size: 0.95rem;
     }
 
     .card-link {
-      display: inline-block;
-      margin-top: 20px;
+      margin-top: 24px;
+      text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
-      text-decoration: none;
+      display: inline-block;
+      width: fit-content;
       border-bottom: 1px solid var(--rose);
     }
 
-    /* CROCHET */
-
-    #crochet .card:first-child {
-      background: var(--rose-light);
+    .split-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
 
-    /* CONTACT */
-
-    .contact-box {
-      background: var(--sage);
-      border-radius: 30px;
-      padding: 60px;
-    }
-
-    .contact-box h2 {
-      margin-bottom: 15px;
-    }
-
-    .contact-box p {
-      max-width: 550px;
-      margin-bottom: 25px;
-    }
-
-    .contact-links {
+    .preview {
+      border-radius: 26px;
+      padding: 38px;
+      min-height: 320px;
       display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    /* FOOTER */
+    .preview-writing {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .preview-crochet {
+      background: var(--sage);
+    }
+
+    .preview h3 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .preview p {
+      max-width: 500px;
+      color: var(--muted);
+    }
+
+    .preview-crochet p {
+      color: #3e493b;
+    }
+
+    .contact-panel {
+      background: var(--ink);
+      color: white;
+      border-radius: 28px;
+      padding: 56px;
+    }
+
+    .contact-panel .eyebrow {
+      color: var(--rose);
+    }
+
+    .contact-panel h2 {
+      margin-bottom: 14px;
+    }
+
+    .contact-panel p {
+      color: #d8d3cf;
+      max-width: 650px;
+    }
+
+    .contact-panel .hero-buttons {
+      margin-top: 26px;
+    }
+
+    .contact-panel .button-light {
+      background: transparent;
+      border-color: #6f6861;
+      color: white;
+    }
 
     footer {
-      max-width: 1100px;
-      margin: auto;
-      padding: 35px 30px 50px;
-      color: var(--muted);
-      font-size: 0.8rem;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 32px 28px 46px;
+      border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      border-top: 1px solid var(--line);
+      gap: 20px;
+      font-size: 0.82rem;
+      color: var(--muted);
     }
 
-    /* MOBILE */
+    @media (max-width: 900px) {
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
 
-    @media (max-width: 760px) {
+      .intro-grid,
+      .split-preview {
+        grid-template-columns: 1fr;
+      }
+
       .nav-inner {
         flex-direction: column;
-        gap: 14px;
+        align-items: flex-start;
       }
 
       .nav-links {
-        gap: 13px;
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 72px 20px;
+      }
+
+      .nav-inner {
+        padding: 16px 20px;
       }
 
       .hero {
-        min-height: 70vh;
+        min-height: 72vh;
       }
 
-      .about-grid,
-      .card-grid {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: clamp(3.4rem, 18vw, 5rem);
       }
 
-      .experience-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .experience-date {
-        text-align: left;
-      }
-
-      .contact-box {
-        padding: 35px;
+      .contact-panel {
+        padding: 34px 24px;
       }
 
       footer {
+        padding: 28px 20px 40px;
         flex-direction: column;
-        gap: 10px;
       }
     }
   </style>
@@ -382,222 +400,236 @@
 
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
-      <a class="name" href="#home">Katelin Walsch</a>
+      <a href="index.html" class="brand">Katelin Walsch</a>
 
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#writings">Writings</a></li>
-        <li><a href="#crochet">Crochet</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="leadership.html">Leadership & Recognition</a></li>
+        <li><a href="writings.html">Writings</a></li>
+        <li><a href="crochet.html">Crochet</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HOME -->
-  <section class="hero" id="home">
-    <div class="hero-content">
+  <main>
 
-      <div class="eyebrow">Welcome</div>
+    <section class="section hero">
+      <div class="hero-inner">
 
-      <h1>
-        Katelin<br>
-        <span>Walsch.</span>
-      </h1>
+        <div class="eyebrow">Welcome</div>
 
-      <p class="hero-intro">
-        Law, writing, creative projects, and the things I make along the way.
-        This is my little corner of the internet for work I'm proud of,
-        ideas I'm exploring, and projects I want to remember.
-      </p>
+        <h1>
+          Katelin<br />
+          <span>Walsch.</span>
+        </h1>
 
-      <div class="hero-buttons">
-        <a href="#writings" class="button button-primary">Read my work</a>
-        <a href="#about" class="button button-secondary">About me</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="eyebrow">About</div>
-
-    <div class="about-grid">
-
-      <div>
-        <h2>A little about me.</h2>
-      </div>
-
-      <div class="about-copy">
-
-        <p>
-          I'm Katelin. This website is a home for both sides of my life:
-          my professional and academic work, and the creative projects
-          I spend my free time making.
+        <p class="hero-copy">
+          Law, writing, leadership, and creative projects.
+          A place for the work I care about, the ideas I'm exploring,
+          and the things I make outside of work.
         </p>
 
-        <p>
-          Here you'll find my writing and research, a simple overview of
-          my experience, and an ever-growing collection of crochet projects.
-        </p>
+        <div class="hero-buttons">
+          <a href="writings.html" class="button button-dark">
+            Read my work
+          </a>
 
-        <div class="little-note">
-          Serious about the work. Not serious enough to make my entire
-          website beige.
+          <a href="about.html" class="button button-light">
+            About me
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+
+      <div class="eyebrow">About</div>
+
+      <div class="intro-grid">
+
+        <div>
+          <h2>A little about me.</h2>
+        </div>
+
+        <div class="intro-copy">
+
+          <p>
+            I'm Katelin. My work and interests sit at the intersection
+            of law, writing, public interest, leadership, and advocacy.
+          </p>
+
+          <p>
+            This site is also a home for the more creative side of my life,
+            including crochet projects and other things I make along the way.
+          </p>
+
+          <div class="note">
+            Professional enough to send to an employer.
+            Personal enough to still feel like me.
+          </div>
+
         </div>
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
+    <section class="section">
 
-    <div class="eyebrow">Experience</div>
-    <h2>Where I've been.</h2>
+      <div class="eyebrow">Selected Highlights</div>
 
-    <div class="experience-list">
+      <h2>Work I'm proud of.</h2>
 
-      <!-- COPY THIS BLOCK FOR EACH JOB -->
-      <div class="experience-item">
-        <div class="experience-role">Position Title</div>
-        <div class="experience-org">Organization</div>
-        <div class="experience-date">Year – Year</div>
+      <div class="highlight-grid">
+
+        <article class="highlight-card featured">
+
+          <div>
+            <div class="card-label">Leadership</div>
+
+            <h3>Davis Polk Leadership Initiative</h3>
+
+            <p>
+              A featured leadership project highlighting my role in
+              developing and leading an initiative centered on leadership,
+              professional growth, and community.
+            </p>
+          </div>
+
+          <a href="leadership.html" class="card-link">
+            Learn more →
+          </a>
+
+        </article>
+
+        <article class="highlight-card">
+
+          <div>
+            <div class="card-label">Recognition</div>
+
+            <h3>Honors & Awards</h3>
+
+            <p>
+              Fellowships, scholarships, academic honors, leadership
+              recognition, and other accomplishments.
+            </p>
+          </div>
+
+          <a href="leadership.html" class="card-link">
+            View recognition →
+          </a>
+
+        </article>
+
+        <article class="highlight-card">
+
+          <div>
+            <div class="card-label">Writing</div>
+
+            <h3>Selected Writing</h3>
+
+            <p>
+              Legal scholarship, research, academic writing,
+              and other pieces I'm excited to share.
+            </p>
+          </div>
+
+          <a href="writings.html" class="card-link">
+            Browse writings →
+          </a>
+
+        </article>
+
       </div>
 
-      <div class="experience-item">
-        <div class="experience-role">Position Title</div>
-        <div class="experience-org">Organization</div>
-        <div class="experience-date">Year – Year</div>
+    </section>
+
+    <section class="section">
+
+      <div class="eyebrow">Explore</div>
+
+      <h2>Two sides of the site.</h2>
+
+      <div class="split-preview">
+
+        <article class="preview preview-writing">
+
+          <div>
+            <div class="card-label">Writings</div>
+
+            <h3>Research, scholarship & writing.</h3>
+
+            <p>
+              A collection of legal writing, academic projects,
+              research interests, published work, and selected pieces.
+            </p>
+          </div>
+
+          <a href="writings.html" class="card-link">
+            Explore writings →
+          </a>
+
+        </article>
+
+        <article class="preview preview-crochet">
+
+          <div>
+            <div class="card-label">Crochet</div>
+
+            <h3>Things I've made.</h3>
+
+            <p>
+              A visual archive of crochet projects, patterns,
+              yarn choices, experiments, and finished pieces.
+            </p>
+          </div>
+
+          <a href="crochet.html" class="card-link">
+            See projects →
+          </a>
+
+        </article>
+
       </div>
 
-      <div class="experience-item">
-        <div class="experience-role">Position Title</div>
-        <div class="experience-org">Organization</div>
-        <div class="experience-date">Year – Year</div>
+    </section>
+
+    <section class="section">
+
+      <div class="contact-panel">
+
+        <div class="eyebrow">Contact</div>
+
+        <h2>Say hello.</h2>
+
+        <p>
+          For professional inquiries, writing, collaboration,
+          or simply to get in touch.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="contact.html" class="button button-light">
+            Contact me
+          </a>
+
+        </div>
+
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <!-- WRITINGS -->
-  <section id="writings">
-
-    <div class="eyebrow">Writings</div>
-    <h2>Selected work.</h2>
-
-    <div class="card-grid">
-
-      <article class="card">
-        <div class="card-label">Legal Writing</div>
-
-        <h3>Title of Writing</h3>
-
-        <p>
-          A short sentence about the piece can go here — enough context
-          to tell someone what it's about without turning this into a résumé.
-        </p>
-
-        <a class="card-link" href="#">
-          Read more →
-        </a>
-      </article>
-
-
-      <article class="card">
-        <div class="card-label">Research</div>
-
-        <h3>Another Piece</h3>
-
-        <p>
-          Add journal notes, published pieces, academic writing,
-          research projects, or other work you'd like to share.
-        </p>
-
-        <a class="card-link" href="#">
-          Read more →
-        </a>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CROCHET -->
-  <section id="crochet">
-
-    <div class="eyebrow">Crochet</div>
-    <h2>Things I've made.</h2>
-
-    <div class="card-grid">
-
-      <article class="card">
-        <div class="card-label">Crochet Project</div>
-
-        <h3>Project Name</h3>
-
-        <p>
-          Eventually we'll put a photo here along with the pattern,
-          yarn, hook size, or whatever else you want to remember.
-        </p>
-
-        <a class="card-link" href="#">
-          See project →
-        </a>
-      </article>
-
-
-      <article class="card">
-        <div class="card-label">Crochet Project</div>
-
-        <h3>Project Name</h3>
-
-        <p>
-          This section can become a visual gallery once we add
-          photographs of your work.
-        </p>
-
-        <a class="card-link" href="#">
-          See project →
-        </a>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-
-    <div class="contact-box">
-
-      <div class="eyebrow">Contact</div>
-
-      <h2>Say hello.</h2>
-
-      <p>
-        For professional inquiries, writing, collaborations,
-        or just to get in touch.
-      </p>
-
-      <div class="contact-links">
-        <!-- Replace # with your actual links -->
-        <a href="#" class="button button-primary">Email me</a>
-        <a href="#" class="button button-secondary">LinkedIn</a>
-      </div>
-
-    </div>
-
-  </section>
+  </main>
 
   <footer>
     <span>© 2026 Katelin Walsch</span>
-    <span>Made with care & a little too much CSS.</span>
+    <span>Built with care & a little too much CSS.</span>
   </footer>
 
 </body>
