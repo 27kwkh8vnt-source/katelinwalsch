@@ -1,7 +1,6 @@
 :root {
   --cream: #f8f4ee;
   --paper: #fffdf9;
-
   --ink: #2b2724;
   --muted: #746d67;
 
@@ -51,7 +50,7 @@ h3 {
 
 h2 {
   font-size: clamp(2.1rem, 4vw, 3rem);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .eyebrow {
@@ -60,7 +59,7 @@ h2 {
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--sage-dark);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 
@@ -70,15 +69,18 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+
   background: rgba(248, 244, 238, 0.95);
   backdrop-filter: blur(10px);
+
   border-bottom: 1px solid var(--line);
 }
 
 .nav-inner {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 14px 28px;
+
+  padding: 13px 28px;
 
   display: flex;
   align-items: center;
@@ -98,14 +100,18 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+
   gap: 18px;
+
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
+
   font-size: 0.88rem;
+
   transition: color 0.2s ease;
 }
 
@@ -119,18 +125,22 @@ nav {
 .section {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 48px 28px;
+
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 
 /* HERO */
 
 .hero {
-  min-height: 58vh;
+  min-height: auto;
+
   display: flex;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 56px;
+
+  padding-top: 24px;
+  padding-bottom: 26px;
 }
 
 .hero-inner {
@@ -139,8 +149,10 @@ nav {
 
 .hero h1 {
   font-size: clamp(4rem, 9vw, 6.7rem);
+
   letter-spacing: -0.05em;
-  margin-bottom: 16px;
+
+  margin-bottom: 14px;
 }
 
 .hero h1 span {
@@ -150,14 +162,18 @@ nav {
 
 .hero-copy {
   max-width: 680px;
+
   color: var(--muted);
+
   font-size: 1.1rem;
 }
 
 .hero-buttons {
-  margin-top: 24px;
+  margin-top: 20px;
+
   display: flex;
   flex-wrap: wrap;
+
   gap: 11px;
 }
 
@@ -166,11 +182,16 @@ nav {
 
 .button {
   display: inline-block;
+
   padding: 10px 19px;
+
   border-radius: 999px;
+
   text-decoration: none;
+
   font-size: 0.88rem;
   font-weight: 500;
+
   transition: 0.2s ease;
 }
 
@@ -192,14 +213,17 @@ nav {
 /* ABOUT */
 
 .about-section {
-  padding-top: 34px;
-  padding-bottom: 42px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .intro-grid {
   display: grid;
+
   grid-template-columns: 0.9fr 1.45fr;
+
   gap: 42px;
+
   align-items: start;
 }
 
@@ -209,49 +233,67 @@ nav {
 }
 
 .intro-copy p + p {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .text-link {
   display: inline-block;
-  margin-top: 18px;
+
+  margin-top: 16px;
+
   text-decoration: none;
+
   color: var(--ink);
+
   font-weight: 600;
   font-size: 0.88rem;
+
   border-bottom: 1px solid var(--rose);
 }
 
 
-/* HIGHLIGHTS */
+/* SELECTED HIGHLIGHTS */
 
 .highlights-section {
-  padding-top: 42px;
-  padding-bottom: 44px;
+  padding-top: 22px;
+  padding-bottom: 30px;
+}
+
+.highlights-section h2 {
+  margin-bottom: 18px;
 }
 
 .highlight-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 16px;
 }
 
 .highlight-card {
-  min-height: 215px;
+  min-height: 205px;
+
   background: var(--paper);
+
   border: 1px solid var(--line);
+
   border-radius: 18px;
-  padding: 24px;
+
+  padding: 23px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  transition: 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .highlight-card:hover {
   transform: translateY(-3px);
+
   box-shadow: 0 10px 26px rgba(40, 35, 30, 0.06);
 }
 
@@ -265,20 +307,27 @@ nav {
 
 .card-label {
   font-size: 0.69rem;
+
   letter-spacing: 0.13em;
+
   text-transform: uppercase;
+
   color: var(--sage-dark);
-  margin-bottom: 10px;
+
+  margin-bottom: 9px;
+
   font-weight: 600;
 }
 
 .highlight-card h3 {
   font-size: 1.5rem;
-  margin-bottom: 8px;
+
+  margin-bottom: 7px;
 }
 
 .highlight-card p {
   color: var(--muted);
+
   font-size: 0.9rem;
 }
 
@@ -287,12 +336,17 @@ nav {
 }
 
 .card-link {
-  margin-top: 18px;
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-top: 16px;
+
   text-decoration: none;
+
   font-size: 0.86rem;
   font-weight: 600;
-  display: inline-block;
-  width: fit-content;
+
   border-bottom: 1px solid var(--rose);
 }
 
@@ -300,15 +354,18 @@ nav {
 /* CONTACT */
 
 .contact-section {
-  padding-top: 38px;
-  padding-bottom: 42px;
+  padding-top: 28px;
+  padding-bottom: 30px;
 }
 
 .contact-panel {
   background: var(--ink);
+
   color: white;
+
   border-radius: 22px;
-  padding: 34px 38px;
+
+  padding: 32px 38px;
 }
 
 .contact-panel .eyebrow {
@@ -316,21 +373,24 @@ nav {
 }
 
 .contact-panel h2 {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .contact-panel p {
   color: #d8d3cf;
+
   max-width: 650px;
 }
 
 .contact-panel .hero-buttons {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .contact-panel .button-light {
   background: transparent;
+
   border-color: #6f6861;
+
   color: white;
 }
 
@@ -339,10 +399,15 @@ nav {
 
 footer {
   max-width: 1150px;
+
   margin: 0 auto;
-  padding: 22px 28px 30px;
+
+  padding: 20px 28px 28px;
+
   border-top: 1px solid var(--line);
+
   font-size: 0.8rem;
+
   color: var(--muted);
 }
 
@@ -363,6 +428,7 @@ footer {
 
   .nav-links {
     justify-content: flex-start;
+
     gap: 13px;
   }
 
@@ -379,32 +445,39 @@ footer {
   }
 
   .nav-inner {
-    padding: 13px 20px;
+    padding: 12px 20px;
   }
 
   .hero {
-    min-height: auto;
-    padding-top: 52px;
-    padding-bottom: 46px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 
   .hero h1 {
     font-size: clamp(3.4rem, 18vw, 5rem);
   }
 
-  .about-section,
-  .highlights-section,
+  .about-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .highlights-section {
+    padding-top: 18px;
+    padding-bottom: 26px;
+  }
+
   .contact-section {
-    padding-top: 32px;
-    padding-bottom: 34px;
+    padding-top: 24px;
+    padding-bottom: 26px;
   }
 
   .contact-panel {
-    padding: 28px 23px;
+    padding: 27px 23px;
   }
 
   footer {
-    padding: 20px 20px 28px;
+    padding: 18px 20px 26px;
   }
 
 }
