@@ -69,17 +69,14 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   background: rgba(248, 244, 238, 0.95);
   backdrop-filter: blur(10px);
-
   border-bottom: 1px solid var(--line);
 }
 
 .nav-inner {
   max-width: 1150px;
   margin: 0 auto;
-
   padding: 13px 28px;
 
   display: flex;
@@ -129,20 +126,24 @@ nav {
 /* HERO */
 
 .hero {
-  min-height: auto;
-  display: flex;
-  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 28px;
+}
 
-  padding-top: 24px;
-  padding-bottom: 24px;
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 65px;
+  align-items: center;
 }
 
 .hero-inner {
-  max-width: 820px;
+  min-width: 0;
+  max-width: 700px;
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 9vw, 6.7rem);
+  font-size: clamp(4rem, 8vw, 6.5rem);
   letter-spacing: -0.05em;
   margin-bottom: 14px;
 }
@@ -153,7 +154,7 @@ nav {
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 630px;
   color: var(--muted);
   font-size: 1.1rem;
 }
@@ -163,6 +164,28 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 11px;
+}
+
+
+/* HEADSHOT */
+
+.hero-photo-wrap {
+  width: 290px;
+  justify-self: end;
+}
+
+.hero-photo {
+  display: block;
+
+  width: 290px;
+  height: 330px;
+
+  object-fit: cover;
+  object-position: center 42%;
+
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(43, 39, 36, 0.11);
 }
 
 
@@ -196,7 +219,7 @@ nav {
 /* ABOUT */
 
 .about-section {
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 18px;
 }
 
@@ -230,8 +253,8 @@ nav {
 /* SELECTED HIGHLIGHTS */
 
 .highlights-section {
-  padding-top: 18px;
-  padding-bottom: 28px;
+  padding-top: 16px;
+  padding-bottom: 26px;
 }
 
 .highlights-section h2 {
@@ -265,37 +288,35 @@ nav {
 }
 
 
-/* EXACT CARD COLORS */
+/* WRITING = GREEN */
 
-/* 1. RESEARCH, WRITING, & SCHOLARSHIP = GREEN */
-
-.highlight-grid .highlight-card:nth-child(1) {
+.writing-card {
   background: var(--sage) !important;
 }
 
-.highlight-grid .highlight-card:nth-child(1) p {
+.writing-card p {
   color: #3e493b;
 }
 
 
-/* 2. CROCHET PROJECTS = WHITE */
+/* CROCHET = WHITE */
 
-.highlight-grid .highlight-card:nth-child(2) {
+.crochet-card {
   background: var(--paper) !important;
 }
 
-.highlight-grid .highlight-card:nth-child(2) p {
+.crochet-card p {
   color: var(--muted);
 }
 
 
-/* 3. ACCOMPLISHMENTS = PINK */
+/* ACCOMPLISHMENTS = PINK */
 
-.highlight-grid .highlight-card:nth-child(3) {
+.accomplishments-card {
   background: var(--rose-light) !important;
 }
 
-.highlight-grid .highlight-card:nth-child(3) p {
+.accomplishments-card p {
   color: var(--muted);
 }
 
@@ -334,8 +355,8 @@ nav {
 /* CONTACT */
 
 .contact-section {
-  padding-top: 26px;
-  padding-bottom: 28px;
+  padding-top: 24px;
+  padding-bottom: 26px;
 }
 
 .contact-panel {
@@ -385,6 +406,20 @@ footer {
 
 @media (max-width: 900px) {
 
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 30px;
+  }
+
+  .hero-photo-wrap {
+    width: 240px;
+  }
+
+  .hero-photo {
+    width: 240px;
+    height: 285px;
+  }
+
   .highlight-grid,
   .intro-grid {
     grid-template-columns: 1fr;
@@ -405,7 +440,7 @@ footer {
 
 /* PHONE */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .section {
     padding-left: 20px;
@@ -421,8 +456,23 @@ footer {
     padding-bottom: 20px;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
   .hero h1 {
     font-size: clamp(3.4rem, 18vw, 5rem);
+  }
+
+  .hero-photo-wrap {
+    width: 100%;
+    justify-self: start;
+  }
+
+  .hero-photo {
+    width: 230px;
+    height: 270px;
   }
 
   .about-section {
