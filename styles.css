@@ -133,7 +133,7 @@ nav {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 290px;
-  gap: 65px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -172,6 +172,8 @@ nav {
 .hero-photo-wrap {
   width: 290px;
   justify-self: end;
+
+  transform: translate(-24px, 18px);
 }
 
 .hero-photo {
@@ -408,11 +410,12 @@ footer {
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr) 240px;
-    gap: 30px;
+    gap: 26px;
   }
 
   .hero-photo-wrap {
     width: 240px;
+    transform: translate(-10px, 14px);
   }
 
   .hero-photo {
@@ -468,6 +471,7 @@ footer {
   .hero-photo-wrap {
     width: 100%;
     justify-self: start;
+    transform: none;
   }
 
   .hero-photo {
