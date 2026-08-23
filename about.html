@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="about-page">
+<body>
 
   <nav>
     <div class="nav-inner">
@@ -47,7 +47,7 @@
 
   <main class="about-main">
 
-    <!-- INTRO -->
+    <!-- ABOUT INTRO -->
 
     <section class="about-hero">
 
@@ -69,9 +69,9 @@
 
     <!-- BACKGROUND -->
 
-    <section class="about-block about-background">
+    <section class="about-section-row">
 
-      <div class="about-heading">
+      <div class="about-section-heading">
         <h2>Background</h2>
       </div>
 
@@ -103,52 +103,46 @@
 
     <!-- EDUCATION -->
 
-    <section class="about-block">
+    <section class="about-section">
 
-      <h2 class="about-section-title">
+      <h2>
         Education
       </h2>
 
-      <div class="about-list">
+      <div class="simple-list">
 
-        <div class="about-list-row">
+        <div class="education-row">
 
           <div>
             <h3>Brooklyn Law School</h3>
             <p>Juris Doctor Candidate, Class of 2028</p>
           </div>
 
-          <span class="about-date">
-            2025 – 2028
-          </span>
+          <span>2025 – 2028</span>
 
         </div>
 
 
-        <div class="about-list-row">
+        <div class="education-row">
 
           <div>
             <h3>University of Notre Dame</h3>
             <p>Master of Nonprofit Administration</p>
           </div>
 
-          <span class="about-date">
-            2020
-          </span>
+          <span>2020</span>
 
         </div>
 
 
-        <div class="about-list-row">
+        <div class="education-row">
 
           <div>
             <h3>University of Southern California</h3>
             <p>B.A., Political Science</p>
           </div>
 
-          <span class="about-date">
-            2019
-          </span>
+          <span>2019</span>
 
         </div>
 
@@ -159,79 +153,72 @@
 
     <!-- AWARDS -->
 
-    <section class="about-block">
+    <section class="about-section">
 
-      <h2 class="about-section-title">
+      <h2>
         Awards & Recognition
       </h2>
 
-      <div class="awards-clean-list">
+      <div class="awards-list">
 
 
-        <div class="award-clean-row">
+        <article class="award">
 
-          <h3>
-            Carswell Scholarship
-          </h3>
+          <div class="award-content">
+            <h3>Carswell Scholarship</h3>
+            <p>Brooklyn Law School · Merit Scholarship</p>
+          </div>
 
-          <p>
-            Brooklyn Law School · Merit Scholarship
-          </p>
-
-        </div>
+        </article>
 
 
-        <div class="award-clean-row">
+        <article class="award">
 
-          <h3>
-            Samuel J. Raiff Scholarship
-          </h3>
+          <div class="award-content">
+            <h3>Samuel J. Raiff Scholarship</h3>
+            <p>Brooklyn Law School · Merit Scholarship</p>
+          </div>
 
-          <p>
-            Brooklyn Law School · Merit Scholarship
-          </p>
-
-        </div>
+        </article>
 
 
-        <div class="award-clean-row">
+        <article class="award">
 
-          <h3>
-            Edward V. Sparer Public Interest Law Fellowship
-          </h3>
+          <div class="award-content">
+            <h3>Edward V. Sparer Public Interest Law Fellowship</h3>
+            <p>Brooklyn Law School</p>
+          </div>
 
-          <p>
-            Brooklyn Law School
-          </p>
-
-        </div>
+        </article>
 
 
-        <div class="award-clean-row">
+        <article class="award">
 
-          <h3>
-            Davis Polk Leadership Initiative
-          </h3>
+          <div class="award-content">
 
-          <p>
-            Columbia University · Innovation Grant Recipient
-          </p>
+            <h3>Davis Polk Leadership Initiative</h3>
 
-          <a
-            href="community.html"
-            class="about-inline-link"
-          >
-            View community work →
-          </a>
+            <p>
+              Columbia University · Innovation Grant Recipient
+            </p>
 
-        </div>
+            <a
+              href="community.html"
+              class="award-link"
+            >
+              View community work →
+            </a>
+
+          </div>
+
+        </article>
 
 
         <!-- STAR -->
 
-        <div class="award-clean-row star-award-row">
+        <article class="award award-media">
 
-          <div class="award-text">
+          <div class="award-content">
 
             <h3>
               Staff Appreciation and Recognition (STAR)
@@ -241,27 +228,32 @@
               Columbia University
             </p>
 
-            <p class="award-description">
+            <p class="award-detail">
               Recognizes colleagues who demonstrate a commitment to
               innovation, leadership, and citizenship.
             </p>
 
           </div>
 
-          <img
-            src="star-award.jpg"
-            alt="Katelin Walsch at Columbia University STAR recognition"
-            class="star-award-photo"
-          />
 
-        </div>
+          <div class="star-image-wrap">
+
+            <img
+              src="star-award.jpg"
+              alt="Katelin Walsch at Columbia University STAR recognition"
+              class="star-image"
+            />
+
+          </div>
+
+        </article>
 
 
         <!-- NOTRE DAME -->
 
-        <div class="award-clean-row notre-dame-award-row">
+        <article class="award award-media notre-dame-award">
 
-          <div class="award-text">
+          <div class="award-content">
 
             <h3>
               Nonprofit Administration Merit Fellow
@@ -274,70 +266,80 @@
           </div>
 
 
-          <div class="notre-dame-thumbnail">
+          <div class="notre-dame-media">
 
             <a
-              href="https://wsbt.com/resources/media/765626f7-65bb-4a4b-b0f8-f0cfcb5a0de6-jumbo16x9_poster_5ac5d8809b56499483faa20f886abf16.png?1589805124150"
+              href="https://wsbt.com/news/local/notre-dame-grade-shares-special-moment-with-grandfather"
               target="_blank"
               rel="noopener noreferrer"
+              class="notre-dame-image-link"
             >
+
               <img
-                src="https://wsbt.com/resources/media/765626f7-65bb-4a4b-b0f8-f0cfcb5a0de6-jumbo16x9_poster_5ac5d8809b56499483faa20f886abf16.png?1589805124150"
+                src="https://wsbt.com/resources/media2/16x9/full/800/center/80/ece33f71-5903-49e9-832d-549d2a769bad-large16x9_NDGradKickertwitter_frame_21480.jpg"
                 alt="Notre Dame graduation feature"
+                class="notre-dame-image"
               />
+
             </a>
 
+
             <a
-              href="https://wsbt.com/resources/media/765626f7-65bb-4a4b-b0f8-f0cfcb5a0de6-jumbo16x9_poster_5ac5d8809b56499483faa20f886abf16.png?1589805124150"
+              href="https://wsbt.com/news/local/notre-dame-grade-shares-special-moment-with-grandfather"
               target="_blank"
               rel="noopener noreferrer"
-              class="notre-dame-feature-link"
+              class="award-link notre-dame-link"
             >
               View original feature →
             </a>
 
           </div>
 
-        </div>
+        </article>
 
 
-        <div class="award-clean-row">
+        <article class="award">
 
-          <h3>
-            Semi-Finalist, English Teaching Assistant Program
-          </h3>
+          <div class="award-content">
 
-          <p>
-            Fulbright U.S. Student Program · Ukraine
-          </p>
+            <h3>
+              Semi-Finalist, English Teaching Assistant Program
+            </h3>
 
-        </div>
+            <p>
+              Fulbright U.S. Student Program · Ukraine
+            </p>
 
+          </div>
 
-        <div class="award-clean-row">
-
-          <h3>
-            Scales Merit Scholar
-          </h3>
-
-          <p>
-            University of Southern California
-          </p>
-
-        </div>
+        </article>
 
 
-        <div class="award-clean-row">
+        <article class="award">
 
-          <h3>
-            Lesher Family Political Science Scholar
-          </h3>
+          <div class="award-content">
+            <h3>Scales Merit Scholar</h3>
+            <p>University of Southern California</p>
+          </div>
 
-          <p>
-            University of Southern California · Merit Scholarship
-          </p>
+        </article>
 
-        </div>
+
+        <article class="award">
+
+          <div class="award-content">
+
+            <h3>
+              Lesher Family Political Science Scholar
+            </h3>
+
+            <p>
+              University of Southern California · Merit Scholarship
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
@@ -346,13 +348,13 @@
 
     <!-- INTERESTS -->
 
-    <section class="about-block about-interests">
+    <section class="about-section interests-section">
 
-      <h2 class="about-section-title">
+      <h2>
         Areas of Interest
       </h2>
 
-      <div class="about-interest-list">
+      <div class="interest-list">
 
         <span>Commercial Litigation</span>
         <span>Legal Writing</span>
@@ -369,7 +371,7 @@
 
 
   <footer>
-    <span>© 2026 Katelin Walsch</span>
+    © 2026 Katelin Walsch
   </footer>
 
 </body>
