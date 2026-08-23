@@ -617,7 +617,7 @@ nav {
 /* NOTRE DAME */
 
 .notre-dame-media {
-  width: 205px;
+  width: 300px;
 
   justify-self: end;
 
@@ -638,12 +638,12 @@ nav {
 .notre-dame-image {
   display: block;
 
-  width: 190px;
-  height: 107px;
+  width: 300px;
+  height: 195px;
 
   object-fit: cover;
 
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .notre-dame-link {
@@ -816,12 +816,12 @@ footer {
   }
 
   .notre-dame-media {
-    width: 175px;
+    width: 260px;
   }
 
   .notre-dame-image {
-    width: 165px;
-    height: 93px;
+    width: 260px;
+    height: 170px;
   }
 
 }
