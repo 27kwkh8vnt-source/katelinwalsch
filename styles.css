@@ -671,6 +671,29 @@ nav {
 
 
 /* ===============================
+   NOTRE DAME THUMBNAIL — ENLARGED
+   Add class "notre-dame-award-media" to the
+   .award-media wrapper around the Notre Dame
+   Merit Fellowship section in your HTML, e.g.:
+   <div class="award-media notre-dame-award-media">
+================================ */
+
+.notre-dame-award-media {
+  grid-template-columns: minmax(0, 1fr) 380px;
+}
+
+.notre-dame-award-media .notre-dame-media {
+  width: 380px;
+}
+
+.notre-dame-award-media .notre-dame-image-link,
+.notre-dame-award-media .notre-dame-image {
+  width: 380px;
+  height: 247px;
+}
+
+
+/* ===============================
    INTERESTS
 ================================ */
 
@@ -852,6 +875,18 @@ footer {
   }
 
   .notre-dame-image {
+    width: 260px;
+    height: 170px;
+  }
+
+  /* Notre Dame enlarged version stays same size as
+     the regular one on mobile since screen is narrow */
+  .notre-dame-award-media .notre-dame-media {
+    width: 260px;
+  }
+
+  .notre-dame-award-media .notre-dame-image-link,
+  .notre-dame-award-media .notre-dame-image {
     width: 260px;
     height: 170px;
   }
