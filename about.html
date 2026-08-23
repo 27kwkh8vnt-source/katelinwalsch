@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="About Katelin Walsch — legal interests, education, awards, and professional background."
+    content="About Katelin Walsch — education, legal interests, awards, and professional background."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="about-page">
+
+  <!-- NAVIGATION -->
 
   <nav>
     <div class="nav-inner">
@@ -44,19 +46,22 @@
     </div>
   </nav>
 
-  <main>
 
-    <section class="section page-hero">
+  <main class="about-main">
 
-      <div class="eyebrow">
+    <!-- INTRO -->
+
+    <section class="about-hero">
+
+      <p class="about-kicker">
         About
-      </div>
+      </p>
 
-      <h1 class="page-title">
+      <h1>
         About me.
       </h1>
 
-      <p class="page-intro">
+      <p class="about-lead">
         I am a J.D. candidate at Brooklyn Law School, Class of 2028,
         with interests in litigation, legal writing, and complex commercial disputes.
       </p>
@@ -64,94 +69,88 @@
     </section>
 
 
-    <section class="section about-page-section">
+    <!-- BACKGROUND -->
 
-      <div class="about-page-grid">
+    <section class="about-block about-background">
 
-        <div>
-          <h2>
-            Background
-          </h2>
-        </div>
+      <div class="about-heading">
+        <h2>Background</h2>
+      </div>
 
-        <div class="long-copy">
+      <div class="about-copy">
 
-          <p>
-            Before beginning law school, I spent four years at Columbia Law School,
-            working with faculty and academic programs in constitutional law and
-            governance. My experience in higher education gave me the opportunity
-            to work closely with legal scholars and helped shape my decision to
-            pursue a legal career.
-          </p>
+        <p>
+          Before beginning law school, I spent four years at Columbia Law School,
+          working with faculty and academic programs in constitutional law and
+          governance. My experience in higher education gave me the opportunity
+          to work closely with legal scholars and helped shape my decision to
+          pursue a legal career.
+        </p>
 
-          <p>
-            I graduated from the University of Notre Dame with a Master of
-            Nonprofit Administration and from the University of Southern California
-            with a bachelor's degree in Political Science.
-          </p>
+        <p>
+          I graduated from the University of Notre Dame with a Master of
+          Nonprofit Administration and from the University of Southern California
+          with a bachelor's degree in Political Science.
+        </p>
 
-          <p>
-            Outside of law school and work, I enjoy crochet, cooking, exploring
-            New York City, and finding new creative projects to take on.
-          </p>
-
-        </div>
+        <p>
+          Outside of law school and work, I enjoy crochet, cooking, exploring
+          New York City, and finding new creative projects to take on.
+        </p>
 
       </div>
 
     </section>
 
 
-    <section class="section about-page-section">
+    <!-- EDUCATION -->
 
-      <div class="eyebrow">
+    <section class="about-block">
+
+      <h2 class="about-section-title">
         Education
-      </div>
-
-      <h2>
-        Education.
       </h2>
 
-      <div class="education-list">
+      <div class="about-list">
 
-        <div class="education-item">
+        <div class="about-list-row">
 
           <div>
             <h3>Brooklyn Law School</h3>
             <p>Juris Doctor Candidate, Class of 2028</p>
           </div>
 
-          <div class="education-date">
+          <span class="about-date">
             2025 – 2028
-          </div>
+          </span>
 
         </div>
 
 
-        <div class="education-item">
+        <div class="about-list-row">
 
           <div>
             <h3>University of Notre Dame</h3>
             <p>Master of Nonprofit Administration</p>
           </div>
 
-          <div class="education-date">
+          <span class="about-date">
             2020
-          </div>
+          </span>
 
         </div>
 
 
-        <div class="education-item">
+        <div class="about-list-row">
 
           <div>
             <h3>University of Southern California</h3>
             <p>B.A., Political Science</p>
           </div>
 
-          <div class="education-date">
+          <span class="about-date">
             2019
-          </div>
+          </span>
 
         </div>
 
@@ -160,66 +159,105 @@
     </section>
 
 
-    <section class="section about-page-section awards-section">
+    <!-- AWARDS -->
 
-      <div class="eyebrow">
+    <section class="about-block">
+
+      <h2 class="about-section-title">
         Awards & Recognition
-      </div>
-
-      <h2>
-        Awards & Recognition.
       </h2>
 
-      <div class="awards-list">
+      <div class="awards-simple-list">
 
-        <div class="award-item">
-          <h3>Carswell Scholarship</h3>
-          <p>Brooklyn Law School Merit Scholarship</p>
+
+        <div class="award-row">
+
+          <h3>
+            Carswell Scholarship
+          </h3>
+
+          <p>
+            Brooklyn Law School Merit Scholarship
+          </p>
+
         </div>
 
-        <div class="award-item">
-          <h3>Samuel J. Raiff Scholarship</h3>
-          <p>Brooklyn Law School Merit Scholarship</p>
+
+        <div class="award-row">
+
+          <h3>
+            Samuel J. Raiff Scholarship
+          </h3>
+
+          <p>
+            Brooklyn Law School Merit Scholarship
+          </p>
+
         </div>
 
-        <div class="award-item">
-          <h3>Edward V. Sparer Public Interest Law Fellowship</h3>
-          <p>Brooklyn Law School</p>
+
+        <div class="award-row">
+
+          <h3>
+            Edward V. Sparer Public Interest Law Fellowship
+          </h3>
+
+          <p>
+            Brooklyn Law School
+          </p>
+
         </div>
 
-        <div class="award-item">
-          <h3>Davis Polk Leadership Initiative</h3>
-          <p>Innovation Grant Recipient</p>
 
-          <a
-            href="community.html"
-            class="recognition-link"
-          >
+        <div class="award-row">
+
+          <h3>
+            Davis Polk Leadership Initiative
+          </h3>
+
+          <p>
+            Innovation Grant Recipient
+          </p>
+
+          <a href="community.html" class="about-inline-link">
             View community work →
           </a>
+
         </div>
 
-        <div class="award-item">
-          <h3>Staff Appreciation and Recognition (STAR)</h3>
-          <p>Columbia University</p>
-          <p class="recognition-description">
+
+        <div class="award-row">
+
+          <h3>
+            Staff Appreciation and Recognition (STAR)
+          </h3>
+
+          <p>
+            Columbia University
+          </p>
+
+          <p class="award-description">
             Recognizes colleagues who demonstrate a commitment to
             innovation, leadership, and citizenship.
           </p>
+
         </div>
+
 
       </div>
 
     </section>
 
 
-    <section class="section about-page-section interests-section">
+    <!-- INTERESTS -->
 
-      <h2>
-        Areas of interest.
+    <section class="about-block about-interests">
+
+      <h2 class="about-section-title">
+        Areas of Interest
       </h2>
 
-      <div class="interest-tags">
+      <div class="about-interest-list">
 
         <span>Commercial Litigation</span>
         <span>Legal Writing</span>
@@ -233,6 +271,7 @@
     </section>
 
   </main>
+
 
   <footer>
     <span>© 2026 Katelin Walsch</span>
