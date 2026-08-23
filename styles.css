@@ -123,7 +123,7 @@ nav {
 }
 
 
-/* HERO */
+/* HOME HERO */
 
 .hero {
   padding-top: 30px;
@@ -179,12 +179,9 @@ nav {
   display: block;
   width: 290px;
   height: 330px;
-
   object-fit: cover;
   object-position: center 42%;
-
   border-radius: 18px;
-
   box-shadow: 0 12px 30px rgba(43, 39, 36, 0.11);
 }
 
@@ -216,7 +213,7 @@ nav {
 }
 
 
-/* ABOUT */
+/* HOME ABOUT */
 
 .about-section {
   padding-top: 18px;
@@ -250,7 +247,7 @@ nav {
 }
 
 
-/* SELECTED HIGHLIGHTS */
+/* HOME HIGHLIGHTS */
 
 .highlights-section {
   padding-top: 44px;
@@ -287,9 +284,6 @@ nav {
   box-shadow: 0 10px 26px rgba(40, 35, 30, 0.06);
 }
 
-
-/* WRITING = GREEN */
-
 .writing-card {
   background: var(--sage) !important;
 }
@@ -298,9 +292,6 @@ nav {
   color: #3e493b;
 }
 
-
-/* CROCHET = WHITE */
-
 .crochet-card {
   background: var(--paper) !important;
 }
@@ -308,9 +299,6 @@ nav {
 .crochet-card p {
   color: var(--muted);
 }
-
-
-/* ACCOMPLISHMENTS = PINK */
 
 .accomplishments-card {
   background: var(--rose-light) !important;
@@ -352,7 +340,7 @@ nav {
 }
 
 
-/* CONTACT */
+/* HOME CONTACT */
 
 .contact-section {
   padding-top: 24px;
@@ -390,6 +378,177 @@ nav {
 }
 
 
+/* ABOUT PAGE INTRO */
+
+.page-hero {
+  padding-top: 60px;
+  padding-bottom: 52px;
+}
+
+.page-title {
+  font-size: clamp(4rem, 8vw, 6.2rem);
+  letter-spacing: -0.045em;
+  margin-bottom: 20px;
+}
+
+.page-intro {
+  max-width: 760px;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+
+/* ABOUT PAGE SECTIONS */
+
+.page-section {
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+.about-page-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.long-copy {
+  color: var(--muted);
+  font-size: 1.02rem;
+  max-width: 720px;
+}
+
+.long-copy p + p {
+  margin-top: 20px;
+}
+
+
+/* EDUCATION */
+
+.education-list {
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 27px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.education-item h3 {
+  font-size: 1.35rem;
+  margin-bottom: 5px;
+}
+
+.education-item p {
+  color: var(--muted);
+}
+
+.education-date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+
+/* AWARDS & RECOGNITION */
+
+.recognition-grid {
+  margin-top: 26px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.recognition-card {
+  min-height: 190px;
+
+  border-radius: 18px;
+  border: 1px solid var(--line);
+
+  padding: 26px;
+}
+
+.recognition-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 11px;
+}
+
+.recognition-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.recognition-green {
+  background: var(--sage);
+}
+
+.recognition-green p {
+  color: #3e493b;
+}
+
+.recognition-white {
+  background: var(--paper);
+}
+
+.recognition-pink {
+  background: var(--rose-light);
+}
+
+
+/* AREAS OF INTEREST */
+
+.interest-tags {
+  margin-top: 28px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.interest-tags span {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  padding: 11px 17px;
+
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+
+/* NEXT PAGE */
+
+.page-next {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+.page-next-box {
+  background: var(--sage);
+  border-radius: 22px;
+
+  padding: 38px 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.page-next-box h2 {
+  margin-bottom: 0;
+}
+
+
 /* FOOTER */
 
 footer {
@@ -422,8 +581,18 @@ footer {
   }
 
   .highlight-grid,
-  .intro-grid {
+  .intro-grid,
+  .about-page-grid,
+  .recognition-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-page-grid {
+    gap: 30px;
+  }
+
+  .recognition-grid {
+    gap: 18px;
   }
 
   .nav-inner {
@@ -494,6 +663,53 @@ footer {
 
   .contact-panel {
     padding: 27px 23px;
+  }
+
+
+  /* ABOUT PAGE MOBILE */
+
+  .page-hero {
+    padding-top: 42px;
+    padding-bottom: 38px;
+  }
+
+  .page-section {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .about-page-grid {
+    gap: 26px;
+  }
+
+  .education-list {
+    margin-top: 20px;
+  }
+
+  .education-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    padding: 23px 0;
+  }
+
+  .recognition-grid {
+    margin-top: 22px;
+  }
+
+  .interest-tags {
+    margin-top: 22px;
+  }
+
+  .page-next {
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
+
+  .page-next-box {
+    padding: 30px 25px;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   footer {
