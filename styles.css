@@ -79,12 +79,10 @@ nav {
 
 .brand {
   font-family: "Playfair Display", serif;
-
   font-size: 1.32rem;
   font-weight: 600;
 
   text-decoration: none;
-
   white-space: nowrap;
 }
 
@@ -146,7 +144,6 @@ nav {
 
 .hero-inner {
   min-width: 0;
-
   max-width: 700px;
 }
 
@@ -172,7 +169,6 @@ nav {
 
 .hero h1 span {
   color: var(--sage-dark);
-
   font-style: italic;
 }
 
@@ -236,7 +232,6 @@ nav {
 
 .button-dark {
   background: var(--ink);
-
   color: white;
 }
 
@@ -588,7 +583,7 @@ nav {
 .award-media {
   display: grid;
 
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) 300px;
 
   gap: 42px;
 
@@ -596,9 +591,13 @@ nav {
 }
 
 
-/* STAR */
+/* ===============================
+   STAR PHOTO
+================================ */
 
 .star-image-wrap {
+  width: 300px;
+
   justify-self: end;
 }
 
@@ -614,7 +613,9 @@ nav {
 }
 
 
-/* NOTRE DAME */
+/* ===============================
+   NOTRE DAME THUMBNAIL
+================================ */
 
 .notre-dame-media {
   width: 300px;
@@ -632,7 +633,14 @@ nav {
 .notre-dame-image-link {
   display: block;
 
+  width: 300px;
+  height: 195px;
+
   line-height: 0;
+
+  overflow: hidden;
+
+  border-radius: 12px;
 }
 
 .notre-dame-image {
@@ -641,17 +649,30 @@ nav {
   width: 300px;
   height: 195px;
 
+  max-width: none;
+
   object-fit: cover;
 
   border-radius: 12px;
 }
 
 .notre-dame-link {
+  display: inline-block;
+
   margin-top: 0;
+
+  text-decoration: none;
+
+  font-size: 0.86rem;
+  font-weight: 600;
+
+  border-bottom: 1px solid var(--rose);
 }
 
 
-/* INTERESTS */
+/* ===============================
+   INTERESTS
+================================ */
 
 .interests-section {
   padding-bottom: 64px;
@@ -679,7 +700,9 @@ nav {
 }
 
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+================================ */
 
 footer {
   max-width: 1150px;
@@ -797,7 +820,7 @@ footer {
   }
 
 
-  /* AWARD PHOTOS STACK ON PHONE */
+  /* AWARD PHOTOS */
 
   .award-media {
     grid-template-columns: 1fr;
@@ -810,6 +833,10 @@ footer {
     justify-self: start;
   }
 
+  .star-image-wrap {
+    width: 260px;
+  }
+
   .star-image {
     width: 260px;
     height: 170px;
@@ -817,6 +844,11 @@ footer {
 
   .notre-dame-media {
     width: 260px;
+  }
+
+  .notre-dame-image-link {
+    width: 260px;
+    height: 170px;
   }
 
   .notre-dame-image {
