@@ -2095,147 +2095,216 @@ body.lightbox-open {
 }
 
 
-/* ================================
+/* =========================================
    WRITINGS PAGE
-   ================================ */
+========================================= */
 
 .writings-main {
-  max-width: 900px;
+  width: min(100% - 56px, 1050px);
   margin: 0 auto;
-  padding: 70px 24px 100px;
 }
 
 
-/* HERO */
+/* PAGE HEADER */
 
 .writings-hero {
-  padding-bottom: 38px;
-  margin-bottom: 45px;
-  border-bottom: 1px solid #d8d1c8;
+  padding: 82px 0 72px;
 }
 
 .writings-hero h1 {
+  margin: 0 0 22px;
+
   font-family: "Playfair Display", serif;
-  font-size: clamp(3.5rem, 8vw, 5.5rem);
-  line-height: 1;
-  margin: 0 0 18px;
-  color: #2c2925;
+  font-size: clamp(5rem, 10vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+
+  color: var(--ink);
 }
 
 .writings-hero p {
+  margin: 0;
+
+  color: var(--muted);
+
   font-family: "DM Sans", sans-serif;
   font-size: 1.05rem;
-  color: #68615a;
-  margin: 0;
+  line-height: 1.7;
 }
 
 
-/* WRITING SAMPLE LIST */
+/* =========================================
+   WRITING BLOCKS
+========================================= */
 
-.writing-samples {
+.writing-card-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  padding: 0 0 100px;
+}
+
+
+/* INDIVIDUAL BLOCK */
+
+.writing-block {
   display: flex;
   flex-direction: column;
+
+  min-height: 390px;
+
+  padding: 28px;
+
+  border: 1px solid rgba(47, 42, 38, 0.12);
+  border-radius: 16px;
 }
 
 
-/* INDIVIDUAL SAMPLE */
+/* COLORS — MATCH HOME PAGE */
 
-.writing-card {
-  padding: 0 0 45px;
-  margin-bottom: 45px;
-  border-bottom: 1px solid #d8d1c8;
+.writing-block-sage {
+  background: #aebba7;
 }
 
-.writing-card:last-child {
-  margin-bottom: 0;
+.writing-block-cream {
+  background: #fbf8f3;
 }
 
-.writing-type {
+.writing-block-blush {
+  background: #ead2cf;
+}
+
+
+/* CARD TYPE */
+
+.writing-block-type {
+  margin-bottom: 17px;
+
+  color: #697866;
+
   font-family: "DM Sans", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+
   text-transform: uppercase;
-  color: #8b8178;
-  margin-bottom: 10px;
+  letter-spacing: 0.15em;
 }
 
-.writing-card h2 {
+
+/* CARD TITLE */
+
+.writing-block h2 {
+  margin: 0 0 10px;
+
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  line-height: 1.2;
-  color: #2c2925;
-  margin: 0 0 7px;
+  font-size: 1.65rem;
+  line-height: 1.15;
+
+  color: var(--ink);
 }
 
-.writing-subtitle {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #68615a;
+
+/* SUBTITLE */
+
+.writing-block-subtitle {
   margin: 0 0 18px;
-}
 
-.writing-description {
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #5f5953;
-  max-width: 720px;
-  margin: 0 0 24px;
-}
-
-
-/* BUTTON */
-
-.writing-button {
-  display: inline-block;
-  padding: 11px 18px;
+  color: var(--ink);
 
   font-family: "DM Sans", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 500;
 
-  color: #f8f5f1;
-  background: #302b27;
+  line-height: 1.45;
+}
+
+
+/* DESCRIPTION */
+
+.writing-block-description {
+  margin: 0 0 28px;
+
+  color: #625c56;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+
+/* LINK STAYS AT BOTTOM */
+
+.writing-block-link {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding-bottom: 3px;
+
+  color: var(--ink);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
 
   text-decoration: none;
-  border-radius: 3px;
 
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+  border-bottom: 1px solid #c88f8b;
 }
 
-.writing-button:hover {
-  background: #514943;
-  transform: translateY(-1px);
+.writing-block-link:hover {
+  opacity: 0.65;
 }
 
 
-/* MOBILE */
+/* =========================================
+   TABLET
+========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+
+  .writing-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
 
   .writings-main {
-    padding: 50px 20px 70px;
+    width: calc(100% - 40px);
   }
 
   .writings-hero {
-    margin-bottom: 35px;
+    padding: 55px 0 50px;
   }
 
   .writings-hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(4.2rem, 18vw, 5.5rem);
   }
 
-  .writing-card {
-    padding-bottom: 35px;
-    margin-bottom: 35px;
+  .writing-card-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    padding-bottom: 70px;
   }
 
-  .writing-card h2 {
-    font-size: 1.7rem;
+  .writing-block {
+    min-height: 340px;
+
+    padding: 25px;
   }
 
 }
