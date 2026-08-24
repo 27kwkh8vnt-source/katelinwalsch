@@ -1074,3 +1074,156 @@ footer {
   }
 
 }
+
+/* =========================================
+   EXPERIENCE PAGE
+========================================= */
+
+.experience-main {
+  width: min(100% - 56px, 1050px);
+  margin: 0 auto;
+}
+
+
+/* PAGE HEADER */
+
+.experience-hero {
+  max-width: 900px;
+  padding: 58px 0 52px;
+}
+
+.experience-kicker {
+  margin-bottom: 8px;
+
+  color: var(--sage-dark);
+
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.experience-hero h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(4rem, 8vw, 6.3rem);
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* EXPERIENCE LIST */
+
+.experience-section {
+  padding: 48px 0 70px;
+
+  border-top: 1px solid var(--line);
+}
+
+.experience-list {
+  border-top: 1px solid var(--line);
+}
+
+.experience-row {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  gap: 45px;
+
+  align-items: center;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+
+/* COMPANY + TITLE */
+
+.experience-info h2 {
+  margin-bottom: 7px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.experience-title {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* INCOMING LABEL */
+
+.experience-note {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  color: var(--sage-dark);
+
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+
+/* DATES */
+
+.experience-date {
+  color: var(--muted);
+
+  font-size: 0.88rem;
+
+  white-space: nowrap;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   EXPERIENCE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .experience-main {
+    width: calc(100% - 40px);
+  }
+
+  .experience-hero {
+    padding: 40px 0 40px;
+  }
+
+  .experience-hero h1 {
+    font-size: clamp(3.5rem, 17vw, 5rem);
+  }
+
+  .experience-section {
+    padding: 38px 0 50px;
+  }
+
+  .experience-row {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+
+    padding: 25px 0;
+  }
+
+  .experience-date {
+    margin-top: 3px;
+
+    text-align: left;
+  }
+
+}
