@@ -1240,17 +1240,14 @@ footer {
 /* PAGE HEADER */
 
 .community-hero {
-  padding: 70px 0 58px;
+  padding: 70px 0 50px;
 }
 
 .community-hero h1 {
   margin: 0;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(4rem, 8vw, 6rem);
   line-height: 1;
-
   letter-spacing: -0.045em;
 }
 
@@ -1260,8 +1257,7 @@ footer {
 ========================================= */
 
 .community-project {
-  padding: 55px 0 75px;
-
+  padding: 50px 0 70px;
   border-top: 1px solid var(--line);
 }
 
@@ -1269,33 +1265,26 @@ footer {
 /* PROJECT HEADING */
 
 .community-project-heading {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .community-project-heading h2 {
   margin: 0 0 8px;
-
   font-family: "Playfair Display", serif;
-
   font-size: 2rem;
   line-height: 1.2;
 }
 
 .community-project-heading p {
   margin: 0;
-
   color: var(--muted);
-
   font-size: 0.95rem;
 }
 
 .community-project-date {
   display: block;
-
   margin-top: 6px;
-
   color: var(--muted);
-
   font-size: 0.83rem;
 }
 
@@ -1304,39 +1293,30 @@ footer {
 
 .community-feature-photo {
   width: 100%;
-
-  margin: 32px 0 40px;
-
-  overflow: hidden;
-
-  border-radius: 16px;
+  max-width: 650px;
+  margin: 30px 0 35px;
 }
 
 .community-feature-photo img {
   display: block;
-
   width: 100%;
   height: auto;
-
-  border-radius: 16px;
+  border-radius: 12px;
 }
 
 
 /* DESCRIPTION */
 
 .community-project-copy {
-  max-width: 790px;
-
-  margin-bottom: 44px;
+  max-width: 760px;
+  margin-bottom: 38px;
 }
 
 .community-project-copy p {
-  margin: 0 0 20px;
-
+  margin: 0 0 18px;
   color: var(--muted);
-
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 
@@ -1344,32 +1324,26 @@ footer {
 
 .community-photo-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 18px;
+  width: 100%;
+  max-width: 850px;
 }
 
 .community-photo {
   width: 100%;
-
-  overflow: hidden;
-
-  border-radius: 12px;
-
-  background: var(--paper);
 }
 
 .community-photo img {
   display: block;
 
   width: 100%;
-
-  aspect-ratio: 4 / 3;
+  height: 180px;
 
   object-fit: cover;
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 
@@ -1378,24 +1352,20 @@ footer {
 ========================================= */
 
 .justice-project {
-  padding: 65px 0 80px;
-
+  padding: 55px 0 70px;
   border-top: 1px solid var(--line);
 }
 
 .justice-project-copy {
   max-width: 760px;
-
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 .justice-project-copy p {
   margin: 0;
-
   color: var(--muted);
-
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 
@@ -1405,8 +1375,17 @@ footer {
 
 @media (max-width: 900px) {
 
+  .community-feature-photo {
+    max-width: 600px;
+  }
+
   .community-photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 650px;
+  }
+
+  .community-photo img {
+    height: 190px;
   }
 
 }
@@ -1422,22 +1401,16 @@ footer {
     width: calc(100% - 40px);
   }
 
-
-  /* HEADER */
-
   .community-hero {
-    padding: 48px 0 42px;
+    padding: 48px 0 40px;
   }
 
   .community-hero h1 {
     font-size: clamp(3.4rem, 16vw, 4.8rem);
   }
 
-
-  /* DAVIS POLK */
-
   .community-project {
-    padding: 42px 0 55px;
+    padding: 40px 0 50px;
   }
 
   .community-project-heading h2 {
@@ -1445,11 +1418,12 @@ footer {
   }
 
   .community-feature-photo {
-    margin: 25px 0 32px;
+    max-width: 100%;
+    margin: 24px 0 30px;
   }
 
   .community-project-copy {
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
 
   .community-project-copy p,
@@ -1457,20 +1431,21 @@ footer {
     font-size: 0.96rem;
   }
 
-
-  /* PHOTOS */
-
   .community-photo-grid {
     grid-template-columns: 1fr;
-
-    gap: 16px;
+    max-width: 100%;
+    gap: 14px;
   }
 
-
-  /* JUSTICE IN EDUCATION */
+  .community-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
 
   .justice-project {
-    padding: 50px 0 60px;
+    padding: 45px 0 60px;
   }
 
 }
