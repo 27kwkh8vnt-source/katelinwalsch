@@ -1866,3 +1866,86 @@ body.lightbox-open {
   }
 
 }
+
+
+/* =========================================
+   CREATIVE PROJECTS SUBNAV
+========================================= */
+
+.creative-subnav {
+  padding: 34px 0 0;
+}
+
+.creative-subnav-parent {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: var(--sage-dark);
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.creative-subnav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--muted);
+
+  font-size: 0.86rem;
+}
+
+.creative-subnav-links a {
+  color: var(--muted);
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.creative-subnav-links a:hover {
+  color: var(--sage-dark);
+}
+
+.creative-subnav-links a.active {
+  color: var(--ink);
+
+  font-weight: 600;
+
+  border-bottom: 1px solid var(--rose);
+}
+
+
+/* SLIGHTLY TIGHTER CROCHET HEADER
+   NOW THAT SUBNAV IS ABOVE IT */
+
+.crochet-gallery-hero {
+  padding-top: 40px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .creative-subnav {
+    padding-top: 26px;
+  }
+
+  .creative-subnav-links {
+    flex-wrap: wrap;
+  }
+
+  .crochet-gallery-hero {
+    padding-top: 32px;
+  }
+
+}
