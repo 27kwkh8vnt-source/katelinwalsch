@@ -2093,3 +2093,149 @@ body.lightbox-open {
         margin-top: 65px;
     }
 }
+
+
+/* ================================
+   WRITINGS PAGE
+   ================================ */
+
+.writings-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 24px 100px;
+}
+
+
+/* HERO */
+
+.writings-hero {
+  padding-bottom: 38px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #d8d1c8;
+}
+
+.writings-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  line-height: 1;
+  margin: 0 0 18px;
+  color: #2c2925;
+}
+
+.writings-hero p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  color: #68615a;
+  margin: 0;
+}
+
+
+/* WRITING SAMPLE LIST */
+
+.writing-samples {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* INDIVIDUAL SAMPLE */
+
+.writing-card {
+  padding: 0 0 45px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #d8d1c8;
+}
+
+.writing-card:last-child {
+  margin-bottom: 0;
+}
+
+.writing-type {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b8178;
+  margin-bottom: 10px;
+}
+
+.writing-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #2c2925;
+  margin: 0 0 7px;
+}
+
+.writing-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #68615a;
+  margin: 0 0 18px;
+}
+
+.writing-description {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #5f5953;
+  max-width: 720px;
+  margin: 0 0 24px;
+}
+
+
+/* BUTTON */
+
+.writing-button {
+  display: inline-block;
+  padding: 11px 18px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: #f8f5f1;
+  background: #302b27;
+
+  text-decoration: none;
+  border-radius: 3px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.writing-button:hover {
+  background: #514943;
+  transform: translateY(-1px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .writings-main {
+    padding: 50px 20px 70px;
+  }
+
+  .writings-hero {
+    margin-bottom: 35px;
+  }
+
+  .writings-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .writing-card {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+  }
+
+  .writing-card h2 {
+    font-size: 1.7rem;
+  }
+
+}
