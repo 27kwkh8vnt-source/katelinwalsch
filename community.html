@@ -38,33 +38,13 @@
 
       <ul class="nav-links">
 
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-
-        <li>
-          <a href="about.html">About</a>
-        </li>
-
-        <li>
-          <a href="experience.html">Experience</a>
-        </li>
-
-        <li>
-          <a href="community.html">Community Work</a>
-        </li>
-
-        <li>
-          <a href="writings.html">Writings</a>
-        </li>
-
-        <li>
-          <a href="crochet.html">Crochet</a>
-        </li>
-
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="community.html">Community Work</a></li>
+        <li><a href="writings.html">Writings</a></li>
+        <li><a href="crochet.html">Crochet</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
       </ul>
 
@@ -73,9 +53,6 @@
   </nav>
 
 
-
-  <!-- MAIN -->
-
   <main class="community-main">
 
 
@@ -83,12 +60,9 @@
 
     <section class="community-hero">
 
-      <h1>
-        Community Work.
-      </h1>
+      <h1>Community Work.</h1>
 
     </section>
-
 
 
     <!-- DAVIS POLK -->
@@ -98,9 +72,7 @@
 
       <div class="community-project-heading">
 
-        <h2>
-          Davis Polk Leadership Initiative
-        </h2>
+        <h2>Davis Polk Leadership Initiative</h2>
 
         <p>
           Columbia University · Innovation Grant Recipient
@@ -109,13 +81,13 @@
       </div>
 
 
-      <!-- SPEAKING PHOTO -->
+      <!-- MAIN SPEAKING PHOTO -->
 
       <div class="community-feature-photo">
 
         <img
           src="6Q0A7085(1).jpg"
-          alt="Katelin speaking at the Davis Polk Leadership Initiative service event"
+          alt="Katelin speaking at the Davis Polk Leadership Initiative event"
         />
 
       </div>
@@ -126,18 +98,20 @@
       <div class="community-project-copy">
 
         <p>
-          As a recipient of the Davis Polk Leadership Initiative Innovation Grant,
-          I received $1,000 to develop a project designed to strengthen
-          relationships within the Columbia community while building connections
-          with the surrounding Morningside Heights and Harlem communities.
+          As a recipient of the Davis Polk Leadership Initiative Innovation
+          Grant, I received $1,000 to develop a project designed to strengthen
+          relationships within the Columbia community while building
+          connections with the surrounding Morningside Heights and Harlem
+          communities.
         </p>
 
         <p>
-          I organized a service event that brought Columbia faculty and support
-          staff together to assemble care packages for unhoused members of the
-          surrounding community. The event was designed both to foster
+          I organized a service event that brought Columbia faculty and
+          support staff together to assemble care packages for unhoused members
+          of the surrounding community. The event was designed both to foster
           relationships among colleagues across the university and to create an
-          opportunity for the Columbia community to serve its neighbors together.
+          opportunity for the Columbia community to serve its neighbors
+          together.
         </p>
 
         <p>
@@ -151,45 +125,82 @@
       </div>
 
 
-      <!-- EVENT PHOTOS -->
+      <!-- EVENT PHOTO GALLERY -->
 
       <div class="community-photo-grid">
 
 
-        <div class="community-photo">
+        <!-- GROUP PHOTO -->
+
+        <button
+          class="community-photo"
+          type="button"
+          onclick="openLightbox('6Q0A7225.jpg', 'Participants gathered with completed care packages')"
+        >
 
           <img
             src="6Q0A7225.jpg"
             alt="Participants gathered with completed care packages"
           />
 
-        </div>
+        </button>
 
 
-        <div class="community-photo">
+        <!-- CURRENT TOP PHOTO MOVED INTO GALLERY -->
+
+        <button
+          class="community-photo"
+          type="button"
+          onclick="openLightbox('6Q0A7185.jpg', 'Participants assembling care packages')"
+        >
+
+          <img
+            src="6Q0A7185.jpg"
+            alt="Participants assembling care packages"
+          />
+
+        </button>
+
+
+        <!-- ACTION PHOTO -->
+
+        <button
+          class="community-photo"
+          type="button"
+          onclick="openLightbox('6Q0A7152.jpg', 'Katelin and colleagues assembling care packages')"
+        >
 
           <img
             src="6Q0A7152.jpg"
-            alt="Katelin assembling care packages with colleagues"
+            alt="Katelin and colleagues assembling care packages"
           />
 
-        </div>
+        </button>
 
 
-        <div class="community-photo">
+        <!-- LONG TABLE PHOTO -->
+
+        <button
+          class="community-photo"
+          type="button"
+          onclick="openLightbox('6Q0A7144.jpg', 'Columbia faculty and staff assembling care packages together')"
+        >
 
           <img
             src="6Q0A7144.jpg"
-            alt="Columbia faculty and staff assembling care packages"
+            alt="Columbia faculty and staff assembling care packages together"
           />
 
-        </div>
+        </button>
 
 
       </div>
 
-    </section>
+      <p class="gallery-hint">
+        Click a photo to enlarge.
+      </p>
 
+    </section>
 
 
     <!-- JUSTICE IN EDUCATION -->
@@ -199,9 +210,7 @@
 
       <div class="community-project-heading">
 
-        <h2>
-          Justice-in-Education Initiative
-        </h2>
+        <h2>Justice-in-Education Initiative</h2>
 
         <p>
           Columbia University · Lead Workshop Coordinator
@@ -217,9 +226,10 @@
       <div class="justice-project-copy">
 
         <p>
-          Through Columbia University's Justice-in-Education Initiative,
-          I volunteered weekly at Rikers Island, where I led a book club for
-          incarcerated women participating in substance use recovery programming.
+          Through Columbia University's Justice-in-Education Initiative, I
+          volunteered weekly at Rikers Island, where I led a book club for
+          incarcerated women participating in substance use recovery
+          programming.
         </p>
 
       </div>
@@ -231,12 +241,94 @@
   </main>
 
 
+  <!-- LIGHTBOX -->
+
+  <div
+    id="photoLightbox"
+    class="photo-lightbox"
+    onclick="closeLightbox(event)"
+    aria-hidden="true"
+  >
+
+    <button
+      class="lightbox-close"
+      type="button"
+      onclick="closeLightboxButton()"
+      aria-label="Close enlarged photo"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt=""
+    />
+
+  </div>
+
 
   <!-- FOOTER -->
 
   <footer>
     <span>© 2026 Katelin Walsch</span>
   </footer>
+
+
+  <!-- LIGHTBOX SCRIPT -->
+
+  <script>
+
+    function openLightbox(src, alt) {
+
+      const lightbox = document.getElementById("photoLightbox");
+      const image = document.getElementById("lightboxImage");
+
+      image.src = src;
+      image.alt = alt;
+
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.classList.add("lightbox-open");
+    }
+
+
+    function closeLightbox(event) {
+
+      if (
+        event.target.id === "photoLightbox"
+      ) {
+
+        closeLightboxButton();
+
+      }
+
+    }
+
+
+    function closeLightboxButton() {
+
+      const lightbox = document.getElementById("photoLightbox");
+
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+
+      document.body.classList.remove("lightbox-open");
+    }
+
+
+    document.addEventListener("keydown", function(event) {
+
+      if (event.key === "Escape") {
+
+        closeLightboxButton();
+
+      }
+
+    });
+
+  </script>
 
 
 </body>
