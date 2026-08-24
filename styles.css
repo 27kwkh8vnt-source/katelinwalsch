@@ -2308,3 +2308,18 @@ body.lightbox-open {
   }
 
 }
+
+
+/* Fix Contact button on homepage */
+
+.contact-panel .button-light {
+  background: #f7f3ee;
+  color: #2d2926;
+  border: 1px solid #f7f3ee;
+}
+
+.contact-panel .button-light:hover {
+  background: #ffffff;
+  color: #2d2926;
+  border-color: #ffffff;
+}
