@@ -26,8 +26,6 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <nav>
 
     <div class="nav-inner">
@@ -81,12 +79,12 @@
       </div>
 
 
-      <!-- MAIN SPEAKING PHOTO -->
+      <!-- FEATURED SPEAKING PHOTO -->
 
       <div class="community-feature-photo">
 
         <img
-          src="6Q0A7085(1).jpg"
+          src="6Q0A7085.jpg"
           alt="Katelin speaking at the Davis Polk Leadership Initiative event"
         />
 
@@ -130,12 +128,11 @@
       <div class="community-photo-grid">
 
 
-        <!-- GROUP PHOTO -->
-
         <button
           class="community-photo"
           type="button"
-          onclick="openLightbox('6Q0A7225.jpg', 'Participants gathered with completed care packages')"
+          data-src="6Q0A7225.jpg"
+          data-alt="Participants gathered with completed care packages"
         >
 
           <img
@@ -146,12 +143,11 @@
         </button>
 
 
-        <!-- CURRENT TOP PHOTO MOVED INTO GALLERY -->
-
         <button
           class="community-photo"
           type="button"
-          onclick="openLightbox('6Q0A7185.jpg', 'Participants assembling care packages')"
+          data-src="6Q0A7185.jpg"
+          data-alt="Participants assembling care packages"
         >
 
           <img
@@ -162,12 +158,11 @@
         </button>
 
 
-        <!-- ACTION PHOTO -->
-
         <button
           class="community-photo"
           type="button"
-          onclick="openLightbox('6Q0A7152.jpg', 'Katelin and colleagues assembling care packages')"
+          data-src="6Q0A7152.jpg"
+          data-alt="Katelin and colleagues assembling care packages"
         >
 
           <img
@@ -178,12 +173,11 @@
         </button>
 
 
-        <!-- LONG TABLE PHOTO -->
-
         <button
           class="community-photo"
           type="button"
-          onclick="openLightbox('6Q0A7144.jpg', 'Columbia faculty and staff assembling care packages together')"
+          data-src="6Q0A7144.jpg"
+          data-alt="Columbia faculty and staff assembling care packages together"
         >
 
           <img
@@ -246,14 +240,13 @@
   <div
     id="photoLightbox"
     class="photo-lightbox"
-    onclick="closeLightbox(event)"
     aria-hidden="true"
   >
 
     <button
+      id="lightboxClose"
       class="lightbox-close"
       type="button"
-      onclick="closeLightboxButton()"
       aria-label="Close enlarged photo"
     >
       ×
@@ -268,62 +261,63 @@
   </div>
 
 
-  <!-- FOOTER -->
-
   <footer>
     <span>© 2026 Katelin Walsch</span>
   </footer>
 
 
-  <!-- LIGHTBOX SCRIPT -->
-
   <script>
 
-    function openLightbox(src, alt) {
+    const lightbox = document.getElementById("photoLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
 
-      const lightbox = document.getElementById("photoLightbox");
-      const image = document.getElementById("lightboxImage");
-
-      image.src = src;
-      image.alt = alt;
-
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden", "false");
-
-      document.body.classList.add("lightbox-open");
-    }
+    const galleryPhotos = document.querySelectorAll(".community-photo");
 
 
-    function closeLightbox(event) {
+    galleryPhotos.forEach(function(photo) {
 
-      if (
-        event.target.id === "photoLightbox"
-      ) {
+      photo.addEventListener("click", function() {
 
-        closeLightboxButton();
+        lightboxImage.src = photo.dataset.src;
+        lightboxImage.alt = photo.dataset.alt;
 
-      }
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
 
-    }
+        document.body.classList.add("lightbox-open");
+
+      });
+
+    });
 
 
-    function closeLightboxButton() {
-
-      const lightbox = document.getElementById("photoLightbox");
+    function closeLightbox() {
 
       lightbox.classList.remove("open");
       lightbox.setAttribute("aria-hidden", "true");
 
       document.body.classList.remove("lightbox-open");
+
     }
+
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+
+    lightbox.addEventListener("click", function(event) {
+
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+
+    });
 
 
     document.addEventListener("keydown", function(event) {
 
       if (event.key === "Escape") {
-
-        closeLightboxButton();
-
+        closeLightbox();
       }
 
     });
