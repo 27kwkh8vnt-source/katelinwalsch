@@ -1227,81 +1227,85 @@ footer {
 
 }
 
-/* =========================================
-   COMMUNITY WORK
-   ========================================= */
+/* ==================================================
+   COMMUNITY WORK PAGE
+   ================================================== */
 
 .community-page {
-  padding: 70px 24px 90px;
-}
-
-.community-container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 70px 24px 100px;
 }
 
-.community-container > h1 {
+
+/* PAGE TITLE */
+
+.community-page > h1 {
   font-size: 48px;
   line-height: 1.1;
   margin: 0 0 65px;
 }
 
 
-/* PROJECT SECTIONS */
+/* PROJECT */
 
 .community-project {
   margin-bottom: 100px;
 }
 
-.community-project-heading {
-  margin-bottom: 28px;
+.community-heading {
+  margin-bottom: 30px;
 }
 
-.community-project-heading h2 {
+.community-heading h2,
+.justice-section h2 {
   font-size: 30px;
   line-height: 1.2;
-  margin: 0 0 7px;
+  margin: 0 0 8px;
 }
 
-.community-subtitle {
+.community-role {
   font-size: 16px;
+  line-height: 1.5;
   margin: 0;
 }
 
 .community-date {
   font-size: 14px;
+  line-height: 1.5;
   margin: 5px 0 0;
   opacity: 0.65;
 }
 
 
-/* MAIN DAVIS POLK PHOTO */
+/* FEATURED SPEAKING PHOTO */
 
-.community-hero-image {
+.community-featured-photo {
   width: 100%;
-  margin: 32px 0 38px;
+  margin: 32px 0 42px;
+  overflow: hidden;
 }
 
-.community-hero-image img {
+.community-featured-photo img {
   display: block;
   width: 100%;
-  height: 520px;
+  height: 540px;
   object-fit: cover;
   object-position: center;
 }
 
 
-/* PROJECT DESCRIPTION */
+/* DESCRIPTION */
 
-.community-description {
-  max-width: 760px;
-  margin-bottom: 42px;
+.community-copy {
+  max-width: 780px;
+  margin: 0 0 45px;
 }
 
-.community-description p {
+.community-copy p {
   font-size: 17px;
   line-height: 1.75;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 
@@ -1311,7 +1315,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  margin-top: 42px;
+  width: 100%;
+  margin-top: 45px;
 }
 
 .community-gallery img {
@@ -1322,27 +1327,39 @@ footer {
 }
 
 
-/* JUSTICE-IN-EDUCATION */
+/* JUSTICE IN EDUCATION */
 
-.community-project-text {
+.justice-section {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding-top: 65px;
 }
 
-.community-project-text .community-description {
-  margin-top: 25px;
+.justice-copy {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .community-featured-photo img {
+    height: 450px;
+  }
+
 }
 
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
 
   .community-page {
     padding: 50px 20px 70px;
   }
 
-  .community-container > h1 {
+  .community-page > h1 {
     font-size: 40px;
     margin-bottom: 50px;
   }
@@ -1351,30 +1368,38 @@ footer {
     margin-bottom: 75px;
   }
 
-  .community-project-heading h2 {
+  .community-heading h2,
+  .justice-section h2 {
     font-size: 26px;
   }
 
-  .community-hero-image img {
+  .community-featured-photo {
+    margin: 25px 0 32px;
+  }
+
+  .community-featured-photo img {
+    width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
   }
 
-  .community-description p {
+  .community-copy p {
     font-size: 16px;
+    line-height: 1.7;
   }
 
   .community-gallery {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 18px;
+    margin-top: 35px;
   }
 
   .community-gallery img {
     aspect-ratio: 3 / 2;
   }
 
-  .community-project-text {
+  .justice-section {
     padding-top: 50px;
   }
 
