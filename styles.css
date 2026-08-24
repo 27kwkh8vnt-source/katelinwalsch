@@ -1226,3 +1226,156 @@ footer {
   }
 
 }
+
+/* =========================================
+   COMMUNITY WORK
+   ========================================= */
+
+.community-page {
+  padding: 70px 24px 90px;
+}
+
+.community-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.community-container > h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 65px;
+}
+
+
+/* PROJECT SECTIONS */
+
+.community-project {
+  margin-bottom: 100px;
+}
+
+.community-project-heading {
+  margin-bottom: 28px;
+}
+
+.community-project-heading h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 7px;
+}
+
+.community-subtitle {
+  font-size: 16px;
+  margin: 0;
+}
+
+.community-date {
+  font-size: 14px;
+  margin: 5px 0 0;
+  opacity: 0.65;
+}
+
+
+/* MAIN DAVIS POLK PHOTO */
+
+.community-hero-image {
+  width: 100%;
+  margin: 32px 0 38px;
+}
+
+.community-hero-image img {
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* PROJECT DESCRIPTION */
+
+.community-description {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.community-description p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 18px;
+}
+
+
+/* THREE-PHOTO GALLERY */
+
+.community-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.community-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+
+/* JUSTICE-IN-EDUCATION */
+
+.community-project-text {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 65px;
+}
+
+.community-project-text .community-description {
+  margin-top: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .community-page {
+    padding: 50px 20px 70px;
+  }
+
+  .community-container > h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .community-project {
+    margin-bottom: 75px;
+  }
+
+  .community-project-heading h2 {
+    font-size: 26px;
+  }
+
+  .community-hero-image img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .community-description p {
+    font-size: 16px;
+  }
+
+  .community-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .community-gallery img {
+    aspect-ratio: 3 / 2;
+  }
+
+  .community-project-text {
+    padding-top: 50px;
+  }
+
+}
