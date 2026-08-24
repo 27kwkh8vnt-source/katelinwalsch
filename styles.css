@@ -1949,3 +1949,147 @@ body.lightbox-open {
   }
 
 }
+
+
+/* ========================================
+   STATIONERY DESIGNS
+======================================== */
+
+.stationery-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 24px 100px;
+}
+
+.stationery-header {
+    margin-bottom: 55px;
+}
+
+.stationery-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 0 24px;
+}
+
+.stationery-header p {
+    max-width: 620px;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+
+/* Etsy button */
+
+.etsy-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #2f2a26;
+    color: #f8f4ef;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-radius: 3px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.etsy-button:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+
+/* Gallery */
+
+.stationery-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px 32px;
+}
+
+.stationery-item {
+    min-width: 0;
+}
+
+.stationery-item a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.stationery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+}
+
+.stationery-item a:hover img {
+    transform: scale(1.015);
+}
+
+.stationery-item-text {
+    padding-top: 16px;
+}
+
+.stationery-item-text h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: 0 0 7px;
+}
+
+.stationery-item-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.75;
+}
+
+
+/* Bottom Etsy section */
+
+.stationery-shop {
+    margin-top: 90px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(47, 42, 38, 0.18);
+}
+
+.stationery-shop h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.stationery-shop p {
+    margin: 0 0 20px;
+    line-height: 1.6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .stationery-page {
+        padding: 45px 20px 70px;
+    }
+
+    .stationery-header {
+        margin-bottom: 40px;
+    }
+
+    .stationery-gallery {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .stationery-shop {
+        margin-top: 65px;
+    }
+}
